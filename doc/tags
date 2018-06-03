@@ -1,0 +1,9 @@
+'g:stalemoves_arrow_type'	stalemoves.txt	/*'g:stalemoves_arrow_type'*
+'g:stalemoves_commands'	stalemoves.txt	/*'g:stalemoves_commands'*
+'g:stalemoves_degrade_start'	stalemoves.txt	/*'g:stalemoves_degrade_start'*
+StalemovesBugs	stalemoves.txt	/*StalemovesBugs*
+StalemovesConfiguration	stalemoves.txt	/*StalemovesConfiguration*
+StalemovesContents	stalemoves.txt	/*StalemovesContents*
+StalemovesContributing	stalemoves.txt	/*StalemovesContributing*
+StalemovesUsage	stalemoves.txt	/*StalemovesUsage*
+stalemoves.txt	stalemoves.txt	/*stalemoves.txt*

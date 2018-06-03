@@ -22,7 +22,7 @@ endif
 
 " }}}
 
-let g:stale_loaded = 1
+let g:stalemoves_loaded = 1
 
 let s:keyCt = 0
 let s:atKey = ""
@@ -54,12 +54,14 @@ function! stalemoves#IncCounter(key)
     endif
 endfunction
 
-" 
+" Iterate through all of the commands to add staleness to
 for s:l in g:stalemoves_commands
     let cmd = "nnoremap \<silent> " . s:l . " "  
+    " Add optional g movement modification
     if has_key(s:move_arrows, s:l)
         let cmd .= g:stalemoves_arrow_type
     endif
+    " Map the command to itself pluss the call to stalemoves#IncCounter
     let cmd .= s:l . ":\<c-u>call stalemoves#IncCounter('" . s:l . "')\<cr>" 
     execute cmd
 endfor
