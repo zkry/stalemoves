@@ -48,9 +48,10 @@ repeating too often.
                                         *'g:stalemoves_degrade_start'*
 
 Set this to specify after how many repeats the repeated command
-starts degrading.
+starts degrading. Increase this to make the effects of staleness
+less noticable.
 >
-  let g:stalemoves_degrade_start = 6
+  let g:stalemoves_degrade_start = 4
 <
 
 ====================================================================

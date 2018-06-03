@@ -17,7 +17,7 @@ if !exists("g:stalemoves_commands")
 endif
 
 if !exists("g:stalemoves_degrade_start")
-    let g:stalemoves_degrade_start = 6
+    let g:stalemoves_degrade_start = 4
 endif
 
 " }}}
@@ -42,15 +42,14 @@ function! stalemoves#IncCounter(key)
     endif
 
     let s:keyCt += 1
-    if s:keyCt >= (g:stalemoves_degrade_start) + 10
+    if s:keyCt >= (g:stalemoves_degrade_start) + 15
         let s:keyCt = 0
-        normal! kVjjg??k
+        normal! kVjjg?k
         return
     endif
     if s:keyCt >= g:stalemoves_degrade_start
         let l:staleness = s:keyCt - g:stalemoves_degrade_start + 1
-        execute "sleep " . (l:staleness * 100) . "m"
-        echo "Staleness leve:" . l:staleness
+        execute "sleep " . (l:staleness * 50) . "m"
     endif
 endfunction
 
