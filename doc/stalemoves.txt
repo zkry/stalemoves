@@ -1,0 +1,67 @@
+*stalemoves.txt* learn to navigate vim better without spamming hjkl
+
+                     __|_ _ | _  _ _  _    _  _ ~
+                    _\ | (_||(/_| | |(_)\/(/__\ ~
+                           
+
+====================================================================
+CONTENTS                                          *StalemovesContents*
+
+    1. Usage ................ |StalemovesUsage|
+    2. Configuration ........ |StalemovesConfiguration|
+    3. Bugs ................. |StalemovesBugs|
+    4. Contributing ......... |StalemovesContributing|
+
+====================================================================
+Section 1: Usage                                     *StalemovesUsage*
+
+The purpose of this plugin is to reinforcement to discourage the bad
+habbit of pressing a movement key repeatedly. 
+
+It is common knowledge in the Vim community that there are better 
+ways to navigate the document than using the arrow or hjkl keys.
+There are even better ways to navigate than using the w, b, e keys.
+
+Installing this plugin alone will stall the Vim editor after 5 keys
+are pressed. Each progressive key press slows down even more.
+After 8 or so key presses, the editor will run the g?? (rot13) 
+command on the current line.
+
+====================================================================
+Section 2: Configuration                     *StalemovesConfiguration*
+
+
+                                           *'g:stalemoves_arrow_type'*
+
+Set this 'g' to perform line-wrap independend up/down movements, gj 
+and gk.
+>
+  let g:stalemoves_arrow_type = ''
+<
+                                             *'g:stalemoves_commands'*
+
+Set this to specifiy what normal commands you want to 'punish' for
+repeating too often.
+>
+  let g:stalemoves_arrow_type = ['h', 'j', 'k', 'l', 'b', 'e', 'w']
+<
+                                        *'g:stalemoves_degrade_start'*
+
+Set this to specify after how many repeats the repeated command
+starts degrading.
+>
+  let g:stalemoves_degrade_start = 6
+<
+
+====================================================================
+Section 3: Bugs                                       *StalemovesBugs*
+
+To be filled in :)
+
+
+====================================================================
+Section 4: Contributing                       *StalemovesContributing*
+
+Contributions/PRs are welcome. I'm especially interested in any 
+particular use case / feature request you might have. Working on
+this alone I'm not sure I got all of the settings in correctly. 
