@@ -1,1 +1,2 @@
 dummy.txt filter=lfs diff=lfs merge=lfs -text
+*.py filter=lfs diff=lfs merge=lfs -text
